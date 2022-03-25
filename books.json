@@ -1,15 +1,1 @@
-{
-  "books": [
-    {
-      "id": 1,
-      "title": "The Shawshank Redemption",
-      "description": "Two imprisoned"
-    },
-    { "id": 2, "title": "The Godfather", "description": "The aging patriarch" },
-    {
-      "id": 3,
-      "title": "The Godfather: Part II",
-      "description": "The early life and career of"
-    }
-  ]
-}
+{"books":[{"id":1,"title":"The Shawshank Redemption","description":"Two imprisoned"},{"id":2,"title":"The Godfather","description":"The aging patriarch"},{"id":3,"title":"The Godfather: Part II","description":"The early life and career of"}]}

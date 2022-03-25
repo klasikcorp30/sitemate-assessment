@@ -3,10 +3,12 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
+const cors = require("cors");
 const app = express();
 const jsonFile = require(path.join(__dirname, "books.json"));
 
 app.use(express.json());
+app.use(cors());
 
 // POST Route:Create
 app.post("/api/create", (req, res) => {

@@ -46,4 +46,11 @@ function promptUser() {
     }
   });
 }
+
+readline.on("close", () => {
+  console.log("\nGoodbye!");
+  process.exit();
+});
+
+// While the user is not exiting, prompt them for input
 promptUser();

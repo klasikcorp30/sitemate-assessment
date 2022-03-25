@@ -4,7 +4,7 @@ const readline = require("readline").createInterface({
   output: process.stdout,
   terminal: false,
 });
-const baseUrl = "http://localhost:3000/api/";
+const baseUrl = "http://localhost:5000/api/";
 
 const createBook = () => {
   //Create new book with user input (id, title, description)
@@ -18,8 +18,10 @@ const createBook = () => {
           Axios.post(baseUrl + "create", { data }).then((res) =>
             console.log(res.data)
           );
+          readline.close();
         } catch (err) {
           console.log("Failed to save");
+          readline.close();
         }
       });
     });
@@ -35,8 +37,10 @@ const deleteBook = () => {
       Axios.delete(baseUrl + "delete", { data }).then((res) =>
         console.log(res.data)
       );
+      readline.close();
     } catch (err) {
       console.log("Failed to delete");
+      readline.close();
     }
   });
 };
@@ -46,8 +50,10 @@ const readBooks = () => {
   try {
     //Using axios to read all books
     Axios.get(baseUrl + "read").then((res) => console.log(res.data));
+    readline.close();
   } catch (err) {
     console.log("Failed to read");
+    readline.close();
   }
 };
 
@@ -63,8 +69,10 @@ const updateBook = () => {
           Axios.put(baseUrl + "update", { data }).then((res) =>
             console.log(res.data)
           );
+          readline.close();
         } catch (err) {
           console.log("Failed to update");
+          readline.close();
         }
       });
     });
