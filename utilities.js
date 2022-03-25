@@ -49,8 +49,7 @@ const readBooks = () => {
   //Read all books
   try {
     //Using axios to read all books
-    Axios.get(baseUrl + "read").then((res) => console.log(res.data));
-    readline.close();
+    readBookMiddleware();
   } catch (err) {
     console.log("Failed to read");
     readline.close();
@@ -84,4 +83,9 @@ module.exports = {
   deleteBook,
   readBooks,
   updateBook,
+  readBookMiddleware,
 };
+async function readBookMiddleware() {
+  let result = await Axios.get(baseUrl + "read");
+  readline.close();
+}
