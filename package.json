@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/klasikcorp30/sitemate-assessment#readme",
   "dependencies": {
+    "axios": "^0.26.1",
     "body-parser": "^1.19.2",
     "express": "^4.17.3"
   }
